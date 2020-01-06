@@ -30,7 +30,7 @@ class Dropzone extends Component {
 
   onDragOver(event) {
     event.preventDefault();
-    if (this.props.disabed) return;
+    if (this.props.disabled) return;
     this.setState({ hightlight: true });
   }
 
@@ -40,7 +40,7 @@ class Dropzone extends Component {
 
   onDrop(event) {
     event.preventDefault();
-    if (this.props.disabed) return;
+    if (this.props.disabled) return;
     const files = event.dataTransfer.files;
     if (this.props.onFilesAdded) {
       const array = this.fileListToArray(files);
